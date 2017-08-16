@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>Enter your Information</h1>
+
+
+@model Bank.Models.RegisterViewModel
+
+
+<h3>Reg:</h3>
+<form asp-controller="Home" asp-action="RegisterHandler" method="post" class="form-inline">
+    
+    <label asp-for="FirstName"></label><br>
+    <input asp-for="FirstName"class="form-control"/>
+    <span asp-validation-for="FirstName"></span>
+    <br>
+    
+    <label asp-for="LastName"></label><br>
+    <input asp-for="LastName"class="form-control"/>
+    <span asp-validation-for="LastName"></span>
+    <br>
+    
+    <label asp-for="Email"></label><br>
+    <input asp-for="Email"class="form-control"/>
+    <span asp-validation-for="Email"></span>
+    <br>
+    
+    <label asp-for="Password"></label><br>
+    <input asp-for="Password"class="form-control"/>
+    <span asp-validation-for="Password"></span>
+    <br>
+    
+    <label asp-for="Cpassword"></label><br>
+    <input asp-for="Cpassword"class="form-control"/>
+    <span asp-validation-for="Cpassword"></span>
+    <br><br>
+    <button type="submit" class="btn btn-primary">Create new User</button>
+</form>
+<br>
+ <a href="/login">Already a User?</a>
+

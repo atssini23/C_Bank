@@ -1,0 +1,18 @@
+@model Bank.Models.RegisterViewModel
+
+<h3>Log in:</h3>
+<form asp-controller="Home" asp-action="Login" method="post"  class="form-inline">
+    
+    <label asp-for="Email"></label><br> 
+    <input asp-for="Email"/>
+    <span asp-validation-for="Email"></span>
+    <br>
+    
+    <label asp-for="Password"></label><br>
+    <input asp-for="Password"/>
+    <span asp-validation-for="Password"></span>
+    <br><br>
+    <button type="submit" class="btn btn-primary" >Create new User</button>
+</form>
+<br>
+<a href="/">Not a Member?</a>
