@@ -1,38 +1,38 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h1>Enter your Information</h1>
+<h1>Become a User</h1>
 
 
 @model Bank.Models.RegisterViewModel
 
 
-<h3>Reg:</h3>
+<h3>Reg</h3>
 <form asp-controller="Home" asp-action="RegisterHandler" method="post" class="form-inline">
     
-    <label asp-for="FirstName"></label><br>
+    <label asp-for="FirstName">First Name</label><br>
     <input asp-for="FirstName"class="form-control"/>
-    <span asp-validation-for="FirstName"></span>
+    <span asp-validation-for="FirstName" class="text-danger"></span>
     <br>
     
-    <label asp-for="LastName"></label><br>
+    <label asp-for="LastName"> Last Name</label><br>
     <input asp-for="LastName"class="form-control"/>
-    <span asp-validation-for="LastName"></span>
+    <span asp-validation-for="LastName" class="text-danger"></span>
     <br>
     
     <label asp-for="Email"></label><br>
     <input asp-for="Email"class="form-control"/>
-    <span asp-validation-for="Email"></span>
+    <span asp-validation-for="Email" class="text-danger"></span>
     <br>
     
     <label asp-for="Password"></label><br>
     <input asp-for="Password"class="form-control"/>
-    <span asp-validation-for="Password"></span>
+    <span asp-validation-for="Password" class="text-danger"></span>
     <br>
     
-    <label asp-for="Cpassword"></label><br>
-    <input asp-for="Cpassword"class="form-control"/>
-    <span asp-validation-for="Cpassword"></span>
+    <label asp-for="Cpassword">Confrim Password</label><br>
+    <input asp-for="Cpassword" class="form-control"/>
+    <span asp-validation-for="Cpassword" class="text-danger"></span>
     <br><br>
     <button type="submit" class="btn btn-primary">Create new User</button>
 </form>
